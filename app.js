@@ -19,6 +19,7 @@ function initLikeAndAlert() {
 }
 
 document.addEventListener('DOMContentLoaded', initLikeAndAlert);
+<<<<<<< HEAD
 function initDislike() {
 const dislikeBtn = document.getElementById('dislike-btn');
 const dislikeCountEl = document.getElementById('dislike-count');
@@ -33,3 +34,20 @@ if (dislikeBtn && dislikeCountEl) {
 }
 }
 document.addEventListener('DOMContentLoaded', initDislike);
+=======
+
+function initDislike() {
+  const dislikeBtn = document.getElementById('dislike-btn');
+  const dislikeCountEl = document.getElementById('dislike-count');
+
+  if (dislikeBtn && dislikeCountEl) {
+    dislikeBtn.addEventListener('click', () => {
+      const current = Number(dislikeCountEl.dataset.count || '0');
+      const next = current + 1;
+      dislikeCountEl.dataset.count = String(next);
+      dislikeCountEl.textContent = String(next);
+    });
+  }
+}
+document.addEventListener('DOMContentLoaded', initDislike);
+>>>>>>> 20299bc264401058f2f55996beb69e57222d3b27
